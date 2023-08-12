@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Commercial</title>
+    <!-- Rent up logo -->
+    <link rel="shortcut icon" href="./images/RentUp logo.jpg" type="image/x-icon">
+
+    <!-- Bootstrap 5 links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="./landingPage.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- RentUp database -->
+    <script src="./RentUpDB.js"></script>
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <body onload="loadCommercial()">
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light"> <!--Nav Bar-->
+            <div class="container">
+                <a class="navbar-brand" href="./landingPage.html" id="icon">
+                    <span class="text-success"><i class="bi bi-house"></i>RENT</span><span class="text-dark">UP</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
+                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+                        <li class="nav-item">
+                            <a class="nav-link active me-2" aria-current="page" href="./landingPage.html"
+                                id="home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-2" aria-current="page" href="./For buyers.html"
+                                id="buy">Buy</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-2" aria-current="page" href="./For Rent.html"
+                                id="rent">Rent</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active me-2" aria-current="page" href="./For Commercial.html"
+                                id="commercial">Commercial</a>
+                        </li>
+
+                        <form class="d-flex me-2">
+                            <input class="form-control me-2" type="search" id="searchCom"
+                                placeholder="Enter Locality/Landmark/Projects" aria-label="Search">
+                            <button class="btn btn-success" id="btnse2" type="button"><i
+                                    class="bi bi-search"></i></button>
+                        </form>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./register.html"
+                                target="_blank" id="register">Register</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="./signup.html" id="signin">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./cart.html" type="button" class="btn btn-light position-relative"
+                                data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cart">
+                                <i class="fa fa-heart" id="navcart" aria-hidden="true"></i>
+                                <!-- <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="badge">
+                                    
+                                </span> -->
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <br>
+
+        <div class="container">
+            <h1 class="text-center mb-5">For Commercial</h1>
+            <div class="row" id="displayCommercial" style="display: flex; justify-content: space-around;">
+
+            </div>
+        </div>
+
+
+        <!-- contact us section -->
+        <section class="about bg-dark section-padding">
+            <div class="container">
+                <div class="footer">
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card-deck text-center bg-dark pb-2">
+                                <div class="card-body text-dark">
+                                    <h3 class="card-title"><span class="text-success">RENT</span><span class="text-light">UP</span></h3><br>
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item" id="icons"><i class="bi bi-facebook" id="fb"></i></li>
+                                        <li class="list-inline-item" id="icons"><i class="bi bi-instagram" id="ins"></i></li>
+                                        <li class="list-inline-item" id="icons"><i class="bi bi-youtube" id="yt"></i></li>
+                                        <li class="list-inline-item" id="icons"><i class="fa fa-twitter" id="tw" aria-hidden="true"></i></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-6 col-lg-4 mb-4">
+                            <div class="card-deck text-center bg-dark pb-2">
+                                <div class="card-body text-light">
+                                    <h2 class="card-title">Quick Link</h2><br>
+                                    <ul class="list-unstyled">
+                                        <li><h5>Home</h5></li>
+                                        <li><h5>About</h5></li>
+                                        <li><h5>Services</h5></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <div class="col-12 col-md-12 col-lg-4 mb-4">
+                            <div class="card-deck text-center bg-dark pb-2">
+                                <div class="card-body text-light">
+                                    <h2 class="card-title">Contact</h2><br>
+                                    <p><i class="bi bi-geo-alt-fill"></i> 7453 Mayflower Ave, Winder, GA 30768, Street NO.3A, Newyork.</p>
+                                    <p><i class="bi bi-envelope-fill"></i> RentUp@gmail.com</p>
+                                    <p><i class="bi bi-telephone-fill"></i> 9449 040 8585</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer page -->
+
+        <footer class="bg-dark p-2 text-center">
+            <div class="container">
+                <p class="text-white">&#169;All reserved rights @RentUp</p>
+            </div>
+        </footer>
+
+
+
+        <script>
+            function loadCommercial() {
+                let displayCom = '';
+                ForCommercial.forEach(displayc => {
+                    displayCom += '<div class="card mb-4" id="Allcards" style="width: 18rem;">' +
+                        '<img src="' + displayc.imageUrl + '" class="card-img-top" id="img" onclick="DescriptionPage(' + displayc.proid + ')" style="height:200px; width:18rem" alt="...">' +
+                        '<div class="card-body">' +
+                        '<h3 class="card-title">' + displayc.title + '</h3>' +
+                        '<p class="card-text">' + displayc.rent + '</p>' +
+                        '<p class="card-text">' + displayc.buildUp + '</p>' +
+                        '<p class="card-text">' + displayc.deposit + '</p>' +
+                        '<a class="btn btn-success me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Owner Details</a><i class="fa fa-heart" id="cart-'+displayc.proid+'" onclick="cartPage(' + displayc.proid + ')" aria-hidden="true" style="font-size:35px"></i>' +
+                        '<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+                        '<div class="modal-dialog modal-dialog-centered">' +
+                        '<div class="modal-content">' +
+                        '<div class="modal-header">' +
+                        '<h5 class="modal-title" id="exampleModalLabel">Enter Your Details here</h5>' +
+                        '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>' +
+                        '</div>' +
+                        '<div class="modal-body">' +
+                        '<div class="form-floating mb-3">' +
+                        '<input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">' +
+                        '<label for="floatingInput">Mobile Number</label>' +
+                        '</div>' +
+                        '<div class="form-floating mb-3">' +
+                        '<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">' +
+                        '<label for="floatingInput">Email address</label>' +
+                        '</div>' +
+                        '</div>' +
+                        '<div class="modal-footer">' +
+                        '<button type="button" class="btn btn-success" onclick="getDetails()" data-bs-dismiss="modal">Get Details</button>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>' +
+                        '</div>';
+
+                });
+                document.getElementById("displayCommercial").innerHTML = displayCom;
+
+
+                // Search bar filter
+
+                const searchBox2 = document.getElementById("searchCom");
+                const btn = document.querySelector("#btnse2");
+
+                console.log(searchBox2);
+
+
+                btn.addEventListener('click', () => {
+                    const searchValue2 = searchBox2.value.toLowerCase().trim();
+                    console.log(searchValue2);
+
+                    // To Clear previous search results
+                    document.getElementById("displayCommercial").innerHTML = '';
+
+                    // Filter and display matching cards
+                    const filteredCardsCom = ForCommercial.filter((display) => {
+                        return display.dataItem.toLowerCase().includes(searchValue2);
+                    });
+                    console.log(filteredCardsCom);  //return the object in an array
+
+
+                    if (filteredCardsCom.length > 0) {
+                        filteredCardsCom.forEach((displayCom) => {
+                            const cardHtmlCom = '<div class="card mb-4" id="card-" style="width: 18rem;">' +
+                                '<div class="location" style="display:none;">' + displayCom.dataItem + '</div>' +
+                                '<img src="' + displayCom.imageUrl + '" class="card-img-top" id="img" onclick="DescriptionPage(' + displayCom.proid + ')" style="height:200px; width:18rem" alt="...">' +
+                                '<div class="card-body">' +
+                                '<h3 class="card-title">' + displayCom.title + '</h3>' +
+                                '<p class="card-text">' + displayCom.buy + '</p>' +
+                                '<p class="card-text">' + displayCom.buildUp + '</p>' +
+                                '<p class="card-text">' + displayCom.deposit + '</p>' +
+                                '<a class="btn btn-success me-4" data-bs-toggle="modal" data-bs-target="#exampleModal">Get Owner Details</a><i class="fa fa-heart" onclick="cartPage(' + displayCom.proid + ')" aria-hidden="true" style="font-size:35px"></i>' +
+                                '<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">' +
+                                '<div class="modal-dialog modal-dialog-centered">' +
+                                '<div class="modal-content">' +
+                                '<div class="modal-header">' +
+                                '<h5 class="modal-title" id="exampleModalLabel">Enter Your Details here</h5>' +
+                                '<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>' +
+                                '</div>' +
+                                '<div class="modal-body">' +
+                                '<div class="form-floating mb-3">' +
+                                '<input type="number" class="form-control" id="floatingInput" placeholder="name@example.com">' +
+                                '<label for="floatingInput">Mobile Number</label>' +
+                                '</div>' +
+                                '<div class="form-floating mb-3">' +
+                                '<input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">' +
+                                '<label for="floatingInput">Email address</label>' +
+                                '</div>' +
+                                '</div>' +
+                                '<div class="modal-footer">' +
+                                '<button type="button" class="btn btn-success" onclick="getDetails()" data-bs-dismiss="modal">Get Details</button>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>' +
+                                '</div>';
+
+                            document.getElementById("displayCommercial").innerHTML += cardHtmlCom;
+                        });
+
+                    } else {
+                        document.getElementById("displayCommercial").innerHTML = '<div class="text-center mb-5 mt-5" style="font-size : 25px">No Result Found.</div>';
+                    }
+
+
+                });
+
+
+            }
+
+            // function get details
+
+            function getDetails(){
+                let contactNumber = 9633756374;
+                prompt( "Contact Number : ",contactNumber);
+            }
+            
+
+            // Description Page
+            function DescriptionPage(proid) {
+                sessionStorage.setItem("proId", proid);
+                window.location.href = "./Description.html";
+            }
+
+
+            // cart 
+            function cartPage(proid) {
+                var icon = document.getElementById("Heart");
+                console.log(icon);
+                var proids = {
+                    "proid": proid,
+                };
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+                let cartButton = document.getElementById(`cart-${proid}`);
+            let heartIcon = cartButton.querySelector('.fa-heart');
+            console.log(heartIcon);
+
+            if(cart.some(item => item.proid === proid)){
+                // if item already in cart , remove it
+                cart = cart.filter(item => item.proid !== proid);
+                cartButton.classList.remove('red-heart');
+                alert("Removed from cart");
+            }else{
+                cart.push(proids);
+                cartButton.classList.add('red-heart');
+                alert("Cart Added successfully");
+
+            }
+                localStorage.setItem("cart", JSON.stringify(cart));
+
+                console.log(cart);
+            }
+
+
+
+            //    show the current page
+            const currentPage = window.location.href;
+
+            const navigationLinks = document.querySelectorAll('.nav-item .nav-link');
+
+            navigationLinks.forEach(link => {
+                if (link.href === currentPage) {
+                    link.classList.add('add');
+                }
+            });
+        </script>
+
+    </body>
+
+</html>

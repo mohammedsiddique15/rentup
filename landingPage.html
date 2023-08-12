@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentUp</title>
+    <!-- Rent up logo -->
+    <link rel="shortcut icon" href="./images/RentUp logo.jpg" type="image/x-icon">
+
+    <!-- Bootstrap 5 links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+        <!-- css -->
+    <link rel="stylesheet" href="./landingPage.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+    <!-- RentUp navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./landingPage.html"><span class="text-success"><i class="bi bi-house"></i>Rent</span>UP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="home" onclick="home()" href="./landingPage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="buy" href="./For buyers.html">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="rent" href="./For Rent.html">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="commercial" href="./For Commercial.html">Commercial</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link active" href="./register.html">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="./cart.html" type="button" class="btn btn-light position-relative" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Cart">
+                            <i class="fa fa-heart" id="navcart" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Carousel slide section -->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./images/appartment.jpg.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>Your Dream House</h5>
+                    <p>DAC ManaPark, <small>Manapakkam chennai south, Chennai</small>.</p>
+                    <p><a href="./For buyers.html" class="btn btn-success mt-3">Learn More</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/appartment3.jpg.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>Always Dedicated</h5>
+                    <p>G Square, Kelambakkam, Chennai.</p>
+                    <p><a href="./For buyers.html" class="btn btn-success mt-3">Learn More</a></p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./images/appartment4.jpg.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption">
+                    <h5>True Construction</h5>
+                    <p>G Square Pavillion, Neelankarai, Chennai.</p>
+                    <p><a href="./For buyers.html" class="btn btn-success mt-3">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- About Section -->
+
+    <section class="about section-padding" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-12 col-12">
+                    <div class="about-img">
+                        <img src="./images/af3.jpg" alt="" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+                    <div class="about-text">
+                        <h2>We Provide Best Quality <br>Services Ever.</h2>
+                        <p>RentUp is a disruptive real-estate platform that makes it possible to buy/sell/rent a house
+                            without paying any brokerage.RentUp is a platform that removes this information asymmetry
+                            and provides a marketplace for free exchange of this information that used to cost 1-2
+                            months of rent as brokerage.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+
+    <section class="services section-padding" id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our services</h2>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-12 col-md-12 col-lg-6">
+                    <div class="card text-black text-center bg-light pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-truck-front-fill"></i>
+                            <h5 class="card-title">Packers and Movers</h5>
+                            <p></p>
+                            <a href="./packers and movers.html" class="btn btn-success">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-6">
+                    <div class="card text-black text-center bg-light pb-2">
+                        <div class="card-body">
+                            <i class="bi bi-paypal"></i>
+                            <h5 class="card-title">Pay Rent</h5>
+                            <p></p>
+                            <a href="./pay rent.html" class="btn btn-success">Pay Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Featured Agent -->
+
+    <section class="agent section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Our Featured Agents</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row silders">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="./images/agent 1.jpg" style="width: 14rem; height: 14rem;" alt="" class="img-fluid agentImg">
+                            </div>
+                            <h3 class="card-title">Michael Grimaldo</h3>
+                            <span class="media" id="fb"><i class="bi bi-facebook"></i></span>
+                            <span class="media" id="insta"><i class="bi bi-instagram"></i></span>
+                            <span class="media" id="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                            <span class="media" id="link"><i class="bi bi-linkedin"></i></span><br>
+                            <a href="" class="btn bg-success text-light mt-3 me-3">Message</a>
+                            <a href="" class="btn bg-dark text-light mt-3 "><i class="bi bi-telephone-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="./images/agent 2.jpg" style="width: 14rem; height: 14rem;" alt="" class="img-fluid agentImg">
+                            </div>
+                            <h3 class="card-title">Gil Christ</h3>
+                            <span class="media" id="fb"><i class="bi bi-facebook"></i></span>
+                            <span class="media" id="insta"><i class="bi bi-instagram"></i></span>
+                            <span class="media" id="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                            <span class="media" id="link"><i class="bi bi-linkedin"></i></span><br>
+                            <a href="" class="btn bg-success text-light mt-3 me-3">Message</a>
+                            <a href="" class="btn bg-dark text-light mt-3 "><i class="bi bi-telephone-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="./images/agent 4.jpg" style="width: 14rem; height: 14rem;" alt="" class="img-fluid agentImg">
+                            </div>
+                            <h3 class="card-title">Teena</h3>
+                            <span class="media" id="fb"><i class="bi bi-facebook"></i></span>
+                            <span class="media" id="insta"><i class="bi bi-instagram"></i></span>
+                            <span class="media" id="tweet"><i class="fa fa-twitter" aria-hidden="true"></i></span>
+                            <span class="media" id="link"><i class="bi bi-linkedin"></i></span><br>
+                            <a href="" class="btn bg-success text-light mt-3 me-3">Message</a>
+                            <a href="" class="btn bg-dark text-light mt-3 "><i class="bi bi-telephone-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+
+    <!-- Project section -->
+
+    <section class="project section-padding" id="project">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-header text-center pb-5">
+                        <h2>Recent Projects</h2>
+                        <p>Noteworthy projects in Chennai</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="./images/appartment3.jpg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">3 BHK Apartment in Sholinganallur</h3>
+                            <h5>63.03 L - 69.77 L</h5>
+                            <a href="./For buyers.html" class="btn bg-success text-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="./images/appartment4.jpg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">3 BHK Apartment in Medavakkam</h3>
+                            <h5>53.22 L - 57.72 L</h5>
+                            <a href="./For buyers.html" class="btn bg-success text-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-12 col-lg-4">
+                    <div class="card text-center bg-white pb-2">
+                        <div class="card-body text-dark">
+                            <div class="img-area mb-4">
+                                <img src="./images/appartment2.jpg.jpg" alt="" class="img-fluid">
+                            </div>
+                            <h3 class="card-title">3 BHK Apartment in Velacherry</h3>
+                            <h5>67.58 L - 73.28 L</h5>
+                            <a href="./For buyers.html" class="btn bg-success text-light">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- contact us section -->
+    <section class="about bg-dark section-padding">
+        <div class="container">
+            <div class="footer">
+                <div class="row">
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card-deck text-center bg-dark pb-2">
+                            <div class="card-body text-dark">
+                                <h3 class="card-title"><span class="text-success">RENT</span><span class="text-light">UP</span></h3><br>
+                                <ul class="list-inline">
+                                    <li class="list-inline-item" id="icons"><i class="bi bi-facebook" id="fb"></i></li>
+                                    <li class="list-inline-item" id="icons"><i class="bi bi-instagram" id="ins"></i></li>
+                                    <li class="list-inline-item" id="icons"><i class="bi bi-youtube" id="yt"></i></li>
+                                    <li class="list-inline-item" id="icons"><i class="fa fa-twitter" id="tw" aria-hidden="true"></i></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md-6 col-lg-4 mb-4">
+                        <div class="card-deck text-center bg-dark pb-2">
+                            <div class="card-body text-light">
+                                <h2 class="card-title">Quick Link</h2><br>
+                                <ul class="list-unstyled">
+                                    <li><h5>Home</h5></li>
+                                    <li><h5>About</h5></li>
+                                    <li><h5>Services</h5></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="col-12 col-md-12 col-lg-4 mb-4">
+                        <div class="card-deck text-center bg-dark pb-2">
+                            <div class="card-body text-light">
+                                <h2 class="card-title">Contact</h2><br>
+                                <p><i class="bi bi-geo-alt-fill"></i> 7453 Mayflower Ave, Winder, GA 30768, Street NO.3A, Newyork.</p>
+                                <p><i class="bi bi-envelope-fill"></i> RentUp@gmail.com</p>
+                                <p><i class="bi bi-telephone-fill"></i> 9449 040 8585</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer page -->
+
+    <footer class="bg-dark p-2 text-center">
+        <div class="container">
+            <p class="text-white">&#169;All reserved rights @RentUp</p>
+        </div>
+    </footer>
+
+
+
+<script>
+    // Show the current page
+    const currentPage  = window.location.href;
+
+    const navigationLinks = document.querySelectorAll('.nav-item .nav-link');
+
+    navigationLinks.forEach(link => {
+        if(link.href === currentPage){
+            link.classList.add('add');
+        }
+    });
+    
+</script>
+</body>
+
+</html>

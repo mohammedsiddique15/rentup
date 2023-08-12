@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registeration Form</title>
+
+
+</head>
+
+<body>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            /* background-color: rgb(214, 160, 160); */
+            background-color: rgb(220, 214, 214);
+            display: grid;
+            place-items: center;
+        }
+
+        .container {
+            background-color: #fff;
+            width: 500px;
+            padding: 10px;
+            border-radius: 30px;
+
+        }
+
+        .container h3 {
+            font-weight: 500;
+            text-align: center;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        .form {
+            padding: 30px 40px;
+        }
+
+        .form-group {
+            color: #333;
+            margin-bottom: 5px;
+            padding-bottom: 10px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #3c40c6;
+            font-weight: 600;
+        }
+
+        .form-group input {
+            border: 2px solid #aaa;
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            outline: none;
+            border-radius: 3px;
+        }
+
+        .form-group p {
+            font-size: 11px;
+            margin-top: 5px;
+            visibility: hidden;
+
+        }
+
+        .form button {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #3c40c6;
+            color: #fff;
+            background-color: #3c40c6;
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* form error and success */
+        .form-group.error p {
+            color: #f53b57;
+            visibility: visible;
+        }
+
+        .form-group.success p {
+            color: #05c46b;
+            visibility: visible;
+        }
+
+        .form-group.error input {
+            border-color: #f53b57;
+        }
+
+        .form-group.success input {
+            border-color: #05c46b;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                max-width: 500px;
+            }
+
+            .form {
+                padding: 20px;
+            }
+
+            .form-group input {
+                font-size: 12px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .container {
+                width: 90%;
+                max-width: 400px;
+            }
+
+            .form {
+                padding: 15px;
+            }
+
+            .form-group input {
+                font-size: 11px;
+            }
+        }
+    </style>
+
+    <div class="container">
+        <form action="#" id="form" class="form" autocomplete="off">
+            <h3>Registeration Form</h3>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter user Name" data-name="username" />
+                <p class="error">Error Message</p>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" id="email" placeholder="Enter Email ID" data-name="Email ID" />
+                <p class="error">Error Message</p>
+            </div>
+            <div class="form-group  ">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter password" data-name="Password" />
+                <p class="error">Error Message</p>
+            </div>
+            <div class="form-group">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Enter Confirm password"
+                    data-name="Confirm password" />
+                <p class="error">Error Message</p>
+            </div>
+            <button type="button">Submit</button>
+        </form>
+    </div>
+
+    <script src="./js2.js"></script>
+
+    <script>
+        const form = document.querySelector("#form");
+        const username = document.querySelector("#username");
+        const email = document.querySelector("#email");
+        const password = document.querySelector("#password");
+        const password2 = document.querySelector("#password2");
+        const btn = document.querySelector("button");
+
+        // onclick event
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+
+            validateInputs();
+            window.location.href = "./signup.html";
+        });
+
+        function validateInputs() {
+            const usernameVal = username.value.trim();
+            const emailVal = email.value.trim();
+            const passwordVal = password.value.trim();
+            const password2Val = password2.value.trim();
+
+            if (usernameVal === '') {
+                setError(username, 'Username is required');
+            }
+            else {
+                setSuccess(username, 'Excellent');
+            }
+
+            if (emailVal === '') {
+                setError(email, 'Email is required');
+            }
+            else if (!validationEmail(emailVal)) {
+                setError(email, 'Please enter valid Email');
+            }
+            else {
+                setSuccess(email, 'Excellent');
+            }
+
+            if (passwordVal === '') {
+                setError(password, 'Password is required');
+            }
+            else if (passwordVal.length < 8) {
+                setError(password, 'password must be atleast 8 character long');
+            }
+            else {
+                setSuccess(password, 'Excellent');
+            }
+
+            if (password2Val === '') {
+                setError(password2, 'Confirm Password is required');
+            }
+
+            else if (password2Val !== passwordVal) {
+                setError(password2, 'Password does not match');
+            }
+            else {
+                setSuccess(password2, 'Excellent');
+            }
+
+            const setUsername = sessionStorage.setItem("name", usernameVal);
+            const setPassword = sessionStorage.setItem("password", passwordVal);
+
+        }
+
+        // Show error in red color
+        function setError(element, message) {
+            const inputGroup = element.parentElement;
+            const errorElement = inputGroup.querySelector('.error');
+
+            console.log(inputGroup);
+            console.log(errorElement);
+
+            errorElement.innerText = message;
+
+            inputGroup.classList.add('error');
+            inputGroup.classList.remove('success');
+        }
+        // Show error in green color
+        function setSuccess(element, message) {
+            const inputGroup = element.parentElement;
+            const errorElement = inputGroup.querySelector('.error');
+
+            errorElement.innerText = message;
+
+            inputGroup.classList.add('success');
+            inputGroup.classList.remove('error');
+        }
+
+        // For email validation
+
+        const validationEmail = (email) => {
+
+            return String(email).toLowerCase().match(/^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/);
+
+        };
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Rent</title>
+    <!-- Rent up logo -->
+    <link rel="shortcut icon" href="./images/RentUp logo.jpg" type="image/x-icon">
+
+
+    <!-- Bootstrap 5 links -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!-- css -->
+    <link rel="stylesheet" href="./landingPage.css">
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+    <!-- bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+    <!-- RentUp navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./landingPage.html"><span class="text-success"><i
+                        class="bi bi-house"></i>Rent</span>UP</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="home1" onclick="home()" href="./landingPage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="buy1" href="./For buyers.html">Buy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="rent1" href="./For Rent.html">Rent</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active me-2" id="commercial1" href="./For Commercial.html">Commercial</a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a class="nav-link active" id="reg" href="./register.html" target="_blank">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" id="sign" href="./signup.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="./cart.html"><i class="fa fa-heart" id="navcart" aria-hidden="true"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="section-padding mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col" style="display: flex; justify-content: center;">
+                    <div class="card text-black text-center bg-light pb-2" style="width: 30rem;">
+                        <div class="card-body">
+                            <h2 class="card-title">Rent Payment</h2>
+                            <form id="paymentForm">
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="tenantName" placeholder="Tenant Name" required>
+                                    <label for="tenantName">Tenant Name</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="number" class="form-control" id="amount" placeholder="Amount" required>
+                                    <label for="amount">Amount</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="text" class="form-control" id="cardNumber" placeholder="Card Number" required>
+                                    <label for="cardNumber">Card Number</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input type="date" class="form-control" id="expiryDate" placeholder="Expiry Date" required>
+                                    <label for="expiryDate">Expiry Date</label>
+                                </div>
+                                <div class="form-floating mb-3" id="eyeslash">
+                                    <input type="password" class="form-control" id="cvv" placeholder="CVV" required>
+                                    
+                                    <label for="cvv" id="labelcvv">CVV</label>
+                                </div>
+                                <a type="button" id="payrent" class="btn btn-success">Pay Rent</a>
+                            </form>
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>
