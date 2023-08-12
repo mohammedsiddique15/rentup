@@ -93,10 +93,4 @@ const CommercialProfile = [
     {proid : 135, imageUrl : "./images/Commercial Shop 12.jpg", imageUrl6 : "./images/Commercial Shop 9.jpg", imageUrl7 : "./images/Commercial Shop 9.jpg" , title : "Office space in Madipakam, chennai for Rent", rent : "Rent : 45,000" , buildUp : "BuildUp : 789sq.ft", deposit : "Deposit : RS.4 Lac", address : "Next to Bus Stop, Near NGO colonu, Madipakam", descriptionCom : "This three bedroom for sale comes with an affordable price tag of just 1.08 Crores rupees with an additional perk of paying no brokerage. Situated on the 4th floor this home can comfortably serve your parking lot for a car and bike needs. This East facing home is over 1438 sqft. & is in a convenient location."}
 ];
 
-const userDetails = [
-    {username : "siddique", password : "ms123"}
-];
-
-const userDetailsSet = sessionStorage.setItem("Username",userDetails.username);
-const passSet = sessionStorage.setItem("Password",userDetails.password);
 
